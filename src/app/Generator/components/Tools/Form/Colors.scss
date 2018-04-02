@@ -1,0 +1,42 @@
+@import 'src/app/Common/scss/variables.scss';
+
+.colors {
+  display: flex;
+  flex-flow: row;
+  padding: 1em 2em;
+
+  &>li {
+    flex: 1;
+    margin: 0.5em;
+  }
+}
+
+.colors-generate {
+  border: 1px solid $border-color;
+  background-color: $main-color;
+  color: $light-color;
+  padding: 1em;
+  font-size: 1.2em;
+
+  &>img,
+  &>span {
+    vertical-align: middle;
+    transition-duration: 0.5s;
+  }
+}
+
+.colors-generate:hover {
+  cursor: pointer;
+  background-color: $main-color-hover;
+
+  &>img {
+    transform: rotate(180deg);
+  }
+}
+
+@media(max-width: 1024px) {
+  .colors {
+    display: flex;
+    flex-flow: column;
+  }
+}

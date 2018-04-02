@@ -1,0 +1,105 @@
+@import 'src/app/Common/scss/variables.scss';
+
+html, body, div, header, nav, ul {
+  margin: 0;
+  padding: 0;
+
+  font-family: $text-font;
+  color: $main-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1em;
+  font-family: $text-font;
+}
+
+h5 {
+  font-size: 1em;
+  font-weight: 100;
+  font-family: $text-font;
+  color: $light-title-color;
+}
+
+h6 {
+  font-size: 0.9em;
+  font-weight: 100;
+  font-family: $text-font;
+  color: $light-title-color;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  height: 6em;
+  background-color: $main-color;
+
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+
+  .navigation {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+  }
+
+  .logo {
+    width: 4em;
+    height: 4em;
+  }
+
+  .brand {
+    margin-left: 0.5em;
+    font-family: $logo-font;
+    font-weight: 100;
+    font-size: 2em;
+    color: $light-color;
+  }
+}
+
+@media(max-width: 767px) {
+  header {
+    height: 8em;
+
+    .navigation {
+      flex-flow: column;
+    }
+
+    .brand {
+      margin: 0em;
+    }
+  }
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.rounded {
+  border-radius: 0.25em;
+}
+
+.shadow {
+  box-shadow: 0px 0px 5px 0px $shadow-color;
+}

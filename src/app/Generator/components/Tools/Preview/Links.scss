@@ -1,0 +1,13 @@
+.links-set {
+  text-align: center;
+  margin-top: 1em;
+
+  a {
+    font-size: 1em;
+  }
+
+  a[disabled] {
+    pointer-events: none;
+    filter: grayscale(.9)
+  }
+}

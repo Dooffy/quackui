@@ -1,0 +1,29 @@
+@import 'src/app/Common/scss/variables.scss';
+
+.gradients {
+  display: flex;
+  flex-flow: row;
+  padding: 0 2em;
+
+  &>li {
+    flex: 1;
+    margin: 0.5em;
+  }
+
+  .gradien-box {
+    width: 100%;
+    border: 1px solid $border-color;
+
+    .gradien-example {
+      height: 10em;
+      margin: 0.5em;
+    }
+  }
+}
+
+@media(max-width: 1024px) {
+  .gradients {
+    display: flex;
+    flex-flow: column;
+  }
+}

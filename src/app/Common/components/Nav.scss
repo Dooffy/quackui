@@ -1,0 +1,32 @@
+@import 'src/app/Common/scss/variables.scss';
+
+.nav {
+  margin-top: 1em;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+
+  a {
+    color: $white-color;
+    text-decoration: none;
+  }
+
+  ul {
+    padding: 1em;
+
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    li {
+      margin: .5em;
+    }
+  }
+
+  .logo {
+    margin-left: .8em;
+    font-family: $logo-font;
+    font-size: 2em;
+    margin-top: -5px;
+  }
+}

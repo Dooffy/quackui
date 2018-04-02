@@ -1,0 +1,35 @@
+{
+  "name": "quackui",
+  "version": "1.0.0",
+  "description": "QuackUI - Simple website’s colors and components generator",
+  "main": "src/index.js",
+  "repository": "https://github.com/dooffy/quackui",
+  "homepage": "http://quackui.org/",
+  "author": "Maksym Shykula",
+  "license": "MIT",
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "standard": "standard"
+  },
+  "dependencies": {
+    "node-sass-chokidar": "^1.1.0",
+    "node-vibrant": "^3.0.0",
+    "npm-run-all": "^4.1.2",
+    "react": "^16.2.0",
+    "react-color": "^2.14.0",
+    "react-dom": "^16.2.0",
+    "react-syntax-highlighter": "^7.0.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0",
+    "react-scripts": "^1.1.1",
+    "standard": "^11.0.0"
+  }
+}

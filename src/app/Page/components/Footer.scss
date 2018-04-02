@@ -1,0 +1,35 @@
+@import 'src/app/Common/scss/variables.scss';
+
+footer {
+  margin-top: 2em;
+  background-color: $footer-background-color;
+
+  span {
+    color: $footer-text-color;
+  }
+
+  a {
+    color: $footer-link-color;
+    text-decoration: none;
+    font-weight: 900;
+  }
+
+  ul {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 8em;
+
+    li {
+      margin: 1em;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    ul {
+      flex-flow: column;
+    }
+  }
+}

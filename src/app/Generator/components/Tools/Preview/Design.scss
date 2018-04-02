@@ -1,0 +1,35 @@
+@import 'src/app/Common/scss/variables.scss';
+
+.design-preview {
+  position: relative;
+  width: 100%;
+  height: 512px;
+
+  .design-area {
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    width: 1024px;
+    height: 512px;
+    filter: grayscale(0.1) brightness(0.5);
+  }
+
+  .content-area {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
+
+    color: $white-color;
+  }
+
+  @media (max-width: 1024px) {
+    .design-area {
+      width: 100%;
+      height: 512px;
+    }
+  }
+}

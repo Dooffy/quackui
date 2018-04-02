@@ -1,0 +1,41 @@
+@import 'src/app/Common/scss/variables.scss';
+
+.gradients {
+  display: flex;
+  flex-flow: row;
+  padding: 1em;
+
+  &>li {
+    flex: 1;
+    margin: 0.5em;
+  }
+
+  .gradien-box {
+    width: 100%;
+    border: 1px solid $border-color;
+
+    .gradien-example {
+      height: 10em;
+      margin: 0.5em;
+      background-color: red;
+    }
+
+    .gradien-colors {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+
+      .gradien-colors-example {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        margin: 0.5em 0;
+      }
+
+      h5 {
+        margin-left: 0.5em;
+      }
+    }
+  }
+}

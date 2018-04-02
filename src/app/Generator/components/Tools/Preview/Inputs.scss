@@ -1,0 +1,26 @@
+@import 'src/app/Common/scss/variables.scss';
+
+.inputs-set {
+  border: 1px solid $border-color;
+  padding: 1em;
+  max-width: 20em;
+  margin: 0 auto;
+
+  div {
+    margin: 1em 0;
+  }
+
+  input {
+    border: 1px solid $border-color;
+  }
+
+  input[type=text], input[type=password] {
+    padding: 0.6em;
+    font-size: 1em;
+    min-width: 15em;
+  }
+
+  .form-buttons {
+    text-align: center;
+  }
+}

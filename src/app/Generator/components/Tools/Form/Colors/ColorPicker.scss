@@ -1,0 +1,41 @@
+@import 'src/app/Common/scss/variables.scss';
+
+.color-box {
+  width: 100%;
+  border: 1px solid $border-color;
+
+  .selected-color {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10em;
+    margin: 0.5em;
+  }
+
+  .color-box-popup {
+    position: absolute;
+    z-index: 2;
+
+    .color-box-cover {
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+    }
+
+    .chrome-picker {
+      z-index: 999;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .color-box-popup {
+      margin-top: 1em;
+      width: 100%;
+      left: 0;
+    }
+  }
+}

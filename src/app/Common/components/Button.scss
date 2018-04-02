@@ -1,0 +1,38 @@
+@import 'src/app/Common/scss/variables.scss';
+
+.btn {
+  border: 1px solid;
+  color: $white-color;
+  margin: 1em;
+}
+
+.inner {
+  box-sizing: border-box;
+  border: 1px solid;
+  background-color: $white-color;
+}
+
+.xl {
+  font-size: 1.25em;
+  padding: .5em 1.25em;
+}
+
+.l {
+  font-size: 1.15em;
+  padding: .5em 1em;
+}
+
+.m {
+  font-size: 1em;
+  padding: .4em .8em;
+}
+
+.s {
+  font-size: .850em;
+  padding: .25em .7em;
+}
+
+.xs {
+  font-size: .6em;
+  padding: .4em .5em;
+}
