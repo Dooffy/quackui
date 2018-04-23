@@ -1,0 +1,6 @@
+<div>
+  <button class="btn btn-xl success">Success</button>
+  <button class="btn btn-xl danger">Danger</button>
+  <button class="btn btn-xl warning">Warning</button>
+  <button class="btn btn-xl info">Info</button>
+</div>

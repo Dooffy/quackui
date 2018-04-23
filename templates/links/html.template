@@ -1,0 +1,29 @@
+<div>
+  <a class="decorated vibrant" href="#">Decorated</a>
+  <a class="non-decorated vibrant" href="#">Non-Decorated</a>
+  <a class="vibrant" href="#" disabled>Disabled</a>
+</div>
+
+<div>
+  <a class="decorated muted" href="#">Decorated</a>
+  <a class="non-decorated muted" href="#">Non-Decorated</a>
+  <a class="muted" href="#" disabled>Disabled</a>
+</div>
+
+<div>
+  <a class="decorated dark-muted" href="#">Decorated</a>
+  <a class="non-decorated dark-muted" href="#">Non-Decorated</a>
+  <a class="dark-muted" href="#" disabled>Disabled</a>
+</div>
+
+<div>
+  <a class="decorated dark-vibrant" href="#">Decorated</a>
+  <a class="non-decorated dark-vibrant" href="#">Non-Decorated</a>
+  <a class="dark-vibrant" href="#" disabled>Disabled</a>
+</div>
+
+<div>
+  <a class="decorated light-muted" href="#">Decorated</a>
+  <a class="non-decorated light-muted" href="#">Non-Decorated</a>
+  <a class="light-muted" href="#" disabled>Disabled</a>
+</div>

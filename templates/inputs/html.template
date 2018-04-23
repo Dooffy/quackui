@@ -1,0 +1,24 @@
+<div>
+  <div>
+    <input type="radio" id="simple-radio-1" name="radio">
+    <label for="simple-radio-1"></label>
+  </div>
+
+  <div>
+    <input type="radio" id="simple-radio-2" name="radio" checked="checked">
+    <label for="simple-radio-2"></label>
+  </div>
+</div>
+
+<div>
+  <div>
+    <input type="checkbox" id="simple-checkbox-3" name="checkbox">
+    <label for="simple-checkbox-3"></label>
+  </div>
+</div>
+
+<div>
+  <div>
+    <input type="text" name="username">
+  </div>
+</div>
