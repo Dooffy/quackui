@@ -1,0 +1,5 @@
+@import 'src/app/Common/scss/inputs.scss';
+
+.button-selector {
+  @include custom-radio-button(1em, 2px);
+}

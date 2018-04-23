@@ -1,13 +1,15 @@
 @import 'src/app/Common/scss/variables.scss';
 
 .colors {
-  display: flex;
-  flex-flow: row;
-  padding: 1em 2em;
+  ul {
+    display: flex;
+    flex-flow: row;
+    padding: 1em 2em;
 
-  &>li {
-    flex: 1;
-    margin: 0.5em;
+    &>li {
+      flex: 1;
+      margin: 0.5em;
+    }
   }
 }
 
@@ -36,7 +38,9 @@
 
 @media(max-width: 1024px) {
   .colors {
-    display: flex;
-    flex-flow: column;
+    ul {
+      display: flex;
+      flex-flow: column;
+    }
   }
 }

@@ -7,8 +7,8 @@ const Header = () => {
     <header>
       <div className='container'>
         <nav>
-          <ul className='navigation' >
-            <li><h1 className='brand'>QuackUI.org</h1></li>
+          <ul className='navigation'>
+            <li><a href='http://quackui.org/'><h1 className='brand'>QuackUI.org</h1></a></li>
           </ul>
         </nav>
       </div>

@@ -1,0 +1,48 @@
+@import 'variables.scss';
+
+@mixin custom-radio-button ($size, $border) {
+  input[type="radio"] {
+    display: none;
+  }
+
+  input[type="radio"] + label {
+    box-shadow: 0 0 0 $border $border-color;
+    display: inline-block;
+    width: $size;
+    height: $size;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  input[type="radio"] + label {
+    border: $size / 2 solid $white-color;
+    background-color: $border-color;
+  }
+
+  input[type="radio"]:checked + label{
+    background-color: $active-color;
+  }
+}
+
+@mixin custom-checkbox-button ($size, $border) {
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"] + label {
+    box-shadow: 0 0 0 $border $border-color;
+    display: inline-block;
+    width: $size;
+    height: $size;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"] + label {
+    border: $size / 2 solid $white-color;
+    background-color: $border-color;
+  }
+
+  input[type="checkbox"]:checked + label{
+    background-color: $active-color;
+  }
+}

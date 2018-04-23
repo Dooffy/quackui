@@ -1,11 +1,19 @@
 import React from 'react'
 
 import './Inputs.css'
-import Button from 'app/Common/components/Button'
 
-const Inputs = ({colors, border, shadow}) => {
-  const muted = colors.find(color => color.code === 'muted')
-  const vibrant = colors.find(color => color.code === 'vibrant')
+import {
+  CODE_MUTED,
+  CODE_VIBRANT,
+  getColorByType
+} from 'app/Common/js/colors'
+
+import Button from 'app/Common/components/Button'
+import CodeExample from 'app/CodeExample/components/CodeExample'
+
+const Inputs = ({colors, border, type}) => {
+  const muted = getColorByType(colors, CODE_MUTED)
+  const vibrant = getColorByType(colors, CODE_VIBRANT)
 
   return (
     <div className='preview-block'>
@@ -21,33 +29,39 @@ const Inputs = ({colors, border, shadow}) => {
             <input className={`${border ? 'rounded' : ''}`} type='password' name='password' />
           </div>
           <div>
-            <input type='radio' name='gender' value='male' /> Male
+            <input type='radio' id='simple-radio-1' name='gender' value='male' />
+            <label htmlFor='simple-radio-1' /> Male
             <br />
-            <input type='radio' name='gender' value='female' /> Female
+            <input type='radio' id='simple-radio-2' name='gender' value='female' />
+            <label htmlFor='simple-radio-2' /> Female
           </div>
           <div>
-            <input type='checkbox' name='terms' value='terms' /> I Accept <a style={{color: vibrant.color}} href='#'>T&C</a>
+            <input type='checkbox' id='simple-checkbox-1' name='terms' value='terms' /> <label htmlFor='simple-checkbox-1' /> I Accept <a style={{color: vibrant.color}} href='#'>T&C</a>
           </div>
 
           <div className='form-buttons'>
             <Button
               label={'Back'}
-              size={'xl'}
-              color={muted.color}
+              size={'btn-xl'}
+              mainColor={muted.color}
+              shadowColor={muted.shadow}
               border={border}
-              shadow={shadow}
-              inner={false} />
+              type={type} />
 
             <Button
               label={'Submit'}
-              size={'xl'}
-              color={vibrant.color}
+              size={'btn-xl'}
+              mainColor={vibrant.color}
+              shadowColor={vibrant.shadow}
               border={border}
-              shadow={shadow}
-              inner={false} />
+              type={type} />
           </div>
         </div>
       </div>
+
+      <CodeExample
+        code={'inputs'}
+        cssData={{selectedColor: vibrant.color, rounded: border}} />
     </div>
   )
 }

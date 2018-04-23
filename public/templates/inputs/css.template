@@ -1,0 +1,58 @@
+div {
+  margin: 1em;
+}
+
+/* ===== Radio Example ===== */
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  box-shadow: 0 0 0 1px #D0D0D0;
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+input[type="radio"] + label {
+  border: 0.4em solid #FFFFFF;
+  background-color: #D0D0D0;
+}
+
+input[type="radio"]:checked + label{
+  background-color: {{selectedColor}};
+}
+
+/* ===== Checkbox Example ===== */
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  box-shadow: 0 0 0 1px #D0D0D0;
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label {
+  border: 0.4em solid #FFFFFF;
+  background-color: #D0D0D0;
+}
+
+input[type="checkbox"]:checked + label{
+  background-color: {{selectedColor}};
+}
+
+/* ===== Input Example ===== */
+
+input[type="text"] {
+  border: 1px solid #D0D0D0;
+  {{#rounded}}
+  border-radius: 0.25em;
+  {{/rounded}}
+}

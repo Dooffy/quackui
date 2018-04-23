@@ -7,7 +7,11 @@ import About from './Tools/About'
 import Error from './Tools/Error'
 
 import {generateColors} from 'app/Common/js/colors'
-import {getRandomImageUrl} from 'app/Common/js/images'
+import {getImages, getRandomImageUrl} from 'app/Common/js/images'
+
+import {
+  BUTTON_TYPE_SIMPLE
+} from 'app/Common/js/buttons'
 
 import './Tools.css'
 
@@ -17,15 +21,17 @@ class Tools extends Component {
 
     this.onColorChange = this.onColorChange.bind(this)
     this.onBorderChange = this.onBorderChange.bind(this)
-    this.onShadowChange = this.onShadowChange.bind(this)
+    this.onTypeChange = this.onTypeChange.bind(this)
     this.generateColorSet = this.generateColorSet.bind(this)
 
     this.state = {
       border: false,
-      shadow: false,
+      type: BUTTON_TYPE_SIMPLE,
+      images: null,
       image: null,
       colors: null,
-      error: false
+      error: false,
+      loading: false
     }
   }
 
@@ -34,19 +40,25 @@ class Tools extends Component {
   }
 
   async generateColorSet () {
+    this.setState({loading: true})
     try {
-      const image = getRandomImageUrl(this.state.image)
+      if (this.state.images === null) this.setState({images: await getImages()})
+
+      const image = await getRandomImageUrl(this.state.images, this.state.image)
       this.setState({
         image,
-        colors: await generateColors(image)
+        loading: false,
+        colors: await generateColors(image.url)
       })
     } catch (err) {
+      console.log(err)
       this.setState({error: true})
     }
   }
 
   onColorChange (key, value) {
-    const colors = this.state.colors.map(element => {
+    let colors = this.state.colors
+    colors.main = this.state.colors.main.map(element => {
       if (element.code === key) element.color = value
       return element
     })
@@ -57,8 +69,8 @@ class Tools extends Component {
     this.setState({border: !this.state.border})
   }
 
-  onShadowChange (key, value) {
-    this.setState({shadow: !this.state.shadow})
+  onTypeChange (type) {
+    this.setState({type: type})
   }
 
   render () {
@@ -70,19 +82,19 @@ class Tools extends Component {
         <h1>Quack - Quack!</h1>
         <Form
           colors={this.state.colors}
+          loading={this.state.loading}
+          type={this.state.type}
           border={this.state.border}
-          shadow={this.state.shadow}
           onColorChange={this.onColorChange}
           onBorderChange={this.onBorderChange}
-          onShadowChange={this.onShadowChange}
-          generateColorSet={this.generateColorSet}
-        />
+          onTypeChange={this.onTypeChange}
+          generateColorSet={this.generateColorSet} />
         <h1>Here's the Duck!</h1>
         <Preview
           colors={this.state.colors}
           image={this.state.image}
           border={this.state.border}
-          shadow={this.state.shadow} />
+          type={this.state.type} />
       </div>
     )
   }

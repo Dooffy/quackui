@@ -1,6 +1,10 @@
 @import 'src/app/Common/scss/variables.scss';
+@import 'src/app/Common/scss/inputs.scss';
 
 .inputs-set {
+  @include custom-radio-button(0.5em, 1px);
+  @include custom-checkbox-button(0.5em, 1px);
+
   border: 1px solid $border-color;
   padding: 1em;
   max-width: 20em;

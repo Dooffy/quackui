@@ -1,9 +1,17 @@
-const IMAGES_COUNT = 200
+import fetch from 'isomorphic-fetch'
 
-export function getRandomImageUrl (previous = null) {
-  const randomImage = Math.floor((Math.random() * IMAGES_COUNT) + 1)
-  const imageUrl = `/images/samples/p${randomImage}.jpeg`
-  return (previous !== null && previous === imageUrl)
+export async function getImages () {
+  const response = await fetch('/data/images.json')
+  return response.json()
+}
+
+export async function getRandomImageUrl (images, previous = null) {
+  const image = images[Math.floor((Math.random() * images.length))]
+
+  return (previous !== null && image.id === previous.id)
     ? getRandomImageUrl(previous)
-    : imageUrl
+    : {
+      ...image,
+      url: `images/samples/${image.id}.jpg`
+    }
 }

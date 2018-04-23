@@ -1,0 +1,19 @@
+@import 'src/app/Common/scss/variables.scss';
+
+.show-more {
+  width: 100%;
+  text-align: center;
+
+  .show-more-button {
+    border: 1px solid $active-color;
+    background-color: $active-color;
+    color: $light-color;
+    padding: 0.5em;
+    font-size: 1em;
+
+    &>img,
+    &>span {
+      vertical-align: middle;
+    }
+  }
+}

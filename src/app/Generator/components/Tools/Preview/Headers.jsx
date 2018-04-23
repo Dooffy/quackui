@@ -1,9 +1,16 @@
 import React from 'react'
 
+import CodeExample from 'app/CodeExample/components/CodeExample'
+
+import {
+  CODE_DARK_VIBRANT,
+  getColorByType
+} from 'app/Common/js/colors'
+
 import './Headers.css'
 
 const Headers = ({colors}) => {
-  const headerColor = colors.find(color => color.code === 'dark-vibrant')
+  const headerColor = getColorByType(colors, CODE_DARK_VIBRANT)
 
   return (
     <div className='preview-block'>
@@ -17,6 +24,8 @@ const Headers = ({colors}) => {
         <h5 style={{color: headerColor.color}}>H5 Lorem ipsum dolor</h5>
         <h6 style={{color: headerColor.color}}>H6 Lorem ipsum dolor</h6>
       </div>
+
+      <CodeExample code={'headers'} cssData={{headerColor: headerColor.color}} />
     </div>
   )
 }

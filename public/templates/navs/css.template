@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Righteous|Open+Sans");
+
+.navigation {
+  font-family: "Open Sans", cursive;
+  margin-top: 1em;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  background-color: {{navigationBg}};
+}
+
+.navigation a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navigation ul {
+  padding: 1em;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  list-style-type: none;
+}
+
+.navigation ul li {
+  margin: .5em;
+}
+
+.navigation .logo {
+  margin-left: .8em;
+  font-family: "Righteous", cursive;
+  font-size: 2em;
+}

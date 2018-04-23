@@ -1,0 +1,14 @@
+@import 'src/app/Common/scss/variables.scss';
+
+.code-highlight {
+  pre {
+    margin: 0;
+  }
+
+  .code-highlight-label {
+    margin: 0;
+    padding: 1em;
+    background-color: $active-color;
+    color: $white-color;
+  }
+}

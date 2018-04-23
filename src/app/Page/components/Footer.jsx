@@ -10,7 +10,6 @@ const Footer = () => {
         <li><a href='https://github.com/Dooffy/quackui/blob/master/LICENSE'>License</a></li>
         <li><a href='https://github.com/Dooffy/quackui/'>About Project</a></li>
         <li><a href='https://github.com/Dooffy/quackui/issues'>Issues</a></li>
-        <li><span>Images provided by</span> <a href='https://unsplash.com/'>Unsplash</a></li>
       </ul>
     </footer>
   )

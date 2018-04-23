@@ -12,27 +12,40 @@
   background-color: $white-color;
 }
 
-.xl {
+.rounded {
+  border-radius: 0.25em;
+}
+
+.shadow {
+  box-shadow: 0px 0px 5px 0px $shadow-color;
+}
+
+.cubic {
+  --box-shadow-color: #000;
+  box-shadow: 0 5px 0 var(--box-shadow-color);
+}
+
+.btn-xl {
   font-size: 1.25em;
   padding: .5em 1.25em;
 }
 
-.l {
+.btn-l {
   font-size: 1.15em;
   padding: .5em 1em;
 }
 
-.m {
+.btn-m {
   font-size: 1em;
   padding: .4em .8em;
 }
 
-.s {
+.btn-s {
   font-size: .850em;
   padding: .25em .7em;
 }
 
-.xs {
+.btn-xs {
   font-size: .6em;
-  padding: .4em .5em;
+  padding: .25em .5em;
 }

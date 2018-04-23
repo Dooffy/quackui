@@ -1,6 +1,6 @@
 {
   "name": "quackui",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "QuackUI - Simple website’s colors and components generator",
   "main": "src/index.js",
   "repository": "https://github.com/dooffy/quackui",
@@ -19,10 +19,13 @@
     "standard": "standard"
   },
   "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "mustache": "^2.3.0",
     "node-sass-chokidar": "^1.1.0",
     "node-vibrant": "^3.0.0",
     "npm-run-all": "^4.1.2",
-    "react": "^16.2.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
     "react-color": "^2.14.0",
     "react-dom": "^16.2.0",
     "react-syntax-highlighter": "^7.0.2"

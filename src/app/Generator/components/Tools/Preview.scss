@@ -1,7 +1,11 @@
 @import 'src/app/Common/scss/variables.scss';
 
 .preview-block {
+  border: 1px solid $border-color;
+  margin-top: 1em;
+
   .example {
+    padding: 1em;
     text-align: left;
   }
 

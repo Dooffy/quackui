@@ -1,0 +1,57 @@
+.btn {
+  color: #ffffff;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  margin: 1em;
+  cursor: pointer;
+  {{#rounded}}
+  border-radius: 0.25em;
+  {{/rounded}}
+  {{#shadow}}
+  box-shadow: 0px 0px 5px 0px #aaaaaa;
+  {{/shadow}}
+  {{#cubic}}
+  box-shadow: 0 5px 0 var(--box-shadow-color);
+  {{/cubic}}
+}
+
+.btn-xl {
+  font-size: 1.25em;
+  padding: .5em 1.25em;
+}
+
+.btn-l {
+  font-size: 1.15em;
+  padding: .5em 1em;
+}
+
+.btn-m {
+  font-size: 1em;
+  padding: .4em .8em;
+}
+
+.btn-s {
+  font-size: .850em;
+  padding: .25em .7em;
+}
+
+.btn-xs {
+  font-size: .6em;
+  padding: .25em .5em;
+}
+
+{{#colors}}
+.{{code}} {
+  background-color: {{color}};
+  border: 1px solid {{color}};
+  {{#cubic}}
+  --box-shadow-color: {{shadow}};
+  {{/cubic}}
+}
+
+.{{code}}:hover {
+  background-color: {{shadow}};
+  border: 1px solid {{shadow}};
+}
+
+{{/colors}}

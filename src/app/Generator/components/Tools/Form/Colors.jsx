@@ -4,10 +4,13 @@ import ColorPicker from './Colors/ColorPicker'
 
 import './Colors.css'
 
-const Colors = ({colors, onColorChange, generateColorSet}) => {
+const Colors = ({colors, loading, onColorChange, generateColorSet}) => {
   return (
-    <div>
-      <ul className='colors'>
+    <div className='colors'>
+      <button className='colors-generate' onClick={generateColorSet} disabled={loading}>
+        <img alt='Generate' src='./images/generate.svg' /> <span>Generate</span>
+      </button>
+      <ul>
         {
           colors.map((data, key) => {
             return <li key={key + data.color}>
@@ -18,9 +21,6 @@ const Colors = ({colors, onColorChange, generateColorSet}) => {
           })
         }
       </ul>
-      <button className='colors-generate' onClick={generateColorSet}>
-        <img alt='Generate' src='./images/generate.svg' /> <span>Generate</span>
-      </button>
     </div>
   )
 }

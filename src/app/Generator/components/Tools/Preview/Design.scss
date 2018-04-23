@@ -33,3 +33,15 @@
     }
   }
 }
+
+.design-image-copyright {
+  text-align: right;
+  font-size: .8em;
+  margin: 0;
+  color: $light-title-color;
+
+  a {
+    font-weight: 900;
+    color: $main-color;
+  }
+}

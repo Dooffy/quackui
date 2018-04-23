@@ -1,0 +1,20 @@
+a.decorated {
+  text-decoration: underline;
+}
+
+a.non-decorated {
+  text-decoration: none;
+}
+
+a[disabled] {
+  text-decoration: underline;
+  pointer-events: none;
+  filter: grayscale(0.9);
+}
+
+{{#colors}}
+.{{code}} {
+  color: {{color}};
+}
+
+{{/colors}}

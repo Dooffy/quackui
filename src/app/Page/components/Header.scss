@@ -47,6 +47,10 @@ ul {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   height: 6em;
   background-color: $main-color;
@@ -94,12 +98,4 @@ header {
   width: 100%;
   margin: auto;
   text-align: center;
-}
-
-.rounded {
-  border-radius: 0.25em;
-}
-
-.shadow {
-  box-shadow: 0px 0px 5px 0px $shadow-color;
 }
